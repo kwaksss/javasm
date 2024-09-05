@@ -2,19 +2,21 @@ package oop2;
 
 import java.util.Random;
 
-public class Car {
 
+
+public class Car {
     private int serial;
     private String name;
     private String color;
     private double fuelSize;
     private double currFuel;
+    private Engine engine;
+
 
     public Car() {
         Random rand = new Random();
-        this.serial = rand.nextInt(10000)+1;
+        this.serial = rand .nextInt(10000)+1;
     }
-
     public Car(int serial, String name, String color, double fuelSize, double currFuel) {
         this.serial = serial;
         this.name = name;
@@ -22,14 +24,14 @@ public class Car {
         this.fuelSize = fuelSize;
         this.currFuel = currFuel;
     }
-    public Car(String name, String color, double fuelSize, double currFuel) {
+    //오버로드 는 ()가 달라야한다 단지 명이 다른것이아닌
+    public Car( String name, String color, double fuelSize, double currFuel) {
         this();
         this.name = name;
         this.color = color;
         this.fuelSize = fuelSize;
         this.currFuel = currFuel;
     }
-    //argument가 달라야됨
 
     @Override
     public String toString() {
@@ -39,34 +41,62 @@ public class Car {
                 ", color='" + color + '\'' +
                 ", fuelSize=" + fuelSize +
                 ", currFuel=" + currFuel +
+                ", engine=" + engine +
                 '}';
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public void setCurrFuel(double currFuel) {
         this.currFuel = currFuel;
-        System.out.println("Curr Fuel: " + currFuel);
+    }
+
+    public void addFuel(double size) throws Exception {
+        if (this.currFuel + size > this.fuelSize) {
+            throw new Exception("EC0001");// 에외처리 상황시 여기서 함수 끝남
+        }
+        this.currFuel += size;
     }
 
     public void go(int distance) {
-        System.out.printf("%s %d 달렸습니다.\n",this.name,distance );
-        this.currFuel -= distance/100.0;
-        //1리터당 100km
-
+        //1: 100KM
+        this.currFuel-=distance/100.0;
+        System.out.printf("%s %d 달렸습니다\n",this.name,distance);
     }
+
     public void brake(){
-        System.out.printf("Brake::::%s\n",this.toString());
-
+        System.out.printf("Brake:::: %s  \n",this.toString());
     }
-    public void addFuel(double size) throws Exception {
-        double a = size + this.currFuel;
-        if(a > this.fuelSize){
-            throw new Exception("EC0001");
-//            System.out.println("넘칩니다.");//이건 Main에 전달 되지 않는다.
-            //return; 쓸 필요 x
 
-        }
-        this.currFuel += size;
 
-    }
 }
 
+class Engine{
+    private int serial;
+    private int size;
+    private String name;
+
+    public Engine() {
+    }
+
+    public Engine(int serial, int size, String name) {
+        this.serial = serial;
+        this.size = size;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "serial=" + serial +
+                ", size=" + size +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
