@@ -19,7 +19,9 @@ public class ElectricCar extends Car {
                 "distance=" + distance;
     }
 
-    public double getDistance() {}
+    public double getDistance() {
+
+    };
 
     @Override
     public void addFuel(double money)  {
