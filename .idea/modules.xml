@@ -10,6 +10,11 @@
       <module fileurl="file://$PROJECT_DIR$/Day06/Day06.iml" filepath="$PROJECT_DIR$/Day06/Day06.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day07/Day07.iml" filepath="$PROJECT_DIR$/Day07/Day07.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day07-1/Day07-1.iml" filepath="$PROJECT_DIR$/Day07-1/Day07-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day08/Day08.iml" filepath="$PROJECT_DIR$/Day08/Day08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day08_jdbc.iml" filepath="$PROJECT_DIR$/Day08_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Day08_jdbc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Day08_jdbc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Day08_jdbc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Day08_jdbc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day09/Day09.iml" filepath="$PROJECT_DIR$/Day09/Day09.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasm.iml" filepath="$PROJECT_DIR$/javasm.iml" />
     </modules>
   </component>

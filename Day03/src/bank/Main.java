@@ -13,7 +13,9 @@ public class Main {
 
         try {
             account1.withdraw(5000);
-        } catch (zeroException e) {
+        }
+
+        catch (zeroException e) {
             System.out.println(e.getMessage());
         } catch (InException e) {
             System.out.println(e.getMessage());
